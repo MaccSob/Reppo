@@ -21,11 +21,19 @@ const PORT = process.env.PORT  || 8080;
 //);
 //
 
-app.get("/", (req, res) => res.send("Hello, world!"));
-app.get("/about", (req, res) => res.send("Hello, D!"));
-app.get("/contact-me", (req, res) => res.send("Hello, D!"));
-app.get("/about", (req, res) => res.send("Hello, D!"));
-
+app.get('/', (req, res) => {
+    res.send('<h1>Homepage</h1>');
+  });
+  app.get('/about', (req, res) => {
+    res.send('<h4>My about page!</h4>');
+  });
+  app.get('/contact-me', (req, res) => {
+    res.send('<h3>Contact me here!</h3>');
+  });
+  app.all('*', (req, res) => {
+    res.status(404).send('<h1>404! Page not found</h1>');
+  });
+  
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
