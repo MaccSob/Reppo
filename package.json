@@ -4,15 +4,20 @@
   "description": "",
   "main": "node.js",
   "scripts": {
-    "start": "node server.js",
-    "type": "module",
+    "start": "node --env-file=.env app.js"
   },
   "repository": {
     "type": "git",
+    "url": "git+https://github.com/MaccSob/Reppo.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-    "devDependencies": {
-    "nodemon": "^3.1.9"
+  "bugs": {
+    "url": "https://github.com/MaccSob/Reppo/issues"
+  },
+  "homepage": "https://github.com/MaccSob/Reppo#readme",
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
